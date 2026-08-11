@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover beaches, temples, and countries for your next journey.">
+  <title>Wanderly | Travel Recommendations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body class="home-page">
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="./travel_recommendation.html" aria-label="Wanderly home">
+      <span class="brand-mark">W</span>
+      <span>Wanderly</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a class="active" href="./travel_recommendation.html" id="home">Home</a></li>
+      <li><a href="./travel_about.html" id="about">About Us</a></li>
+      <li><a href="./travel_contact.html" id="contact">Contact Us</a></li>
+    </ul>
+
+    <div class="search-bar" role="search">
+      <label class="sr-only" for="searchInput">Search recommendations</label>
+      <input type="search" id="searchInput" placeholder="Beach, temple or country">
+      <button class="button button-search" id="btnSearch" type="button">Search</button>
+      <button class="button button-clear" id="btnClear" type="button">Reset</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">ig</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">f</a>
+        <a href="https://www.youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube">yt</a>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Stories begin beyond the map</p>
+        <h1 id="hero-title">Explore.<br>Dream.<br>Discover.</h1>
+        <p class="hero-copy">
+          Meet new cultures, taste unfamiliar flavors, and find places that stay
+          with you long after the journey ends.
+        </p>
+        <a class="book-button" href="./travel_contact.html">Book Now</a>
+      </div>
+
+      <aside class="search-results" id="result" aria-live="polite" aria-label="Travel recommendations"></aside>
+    </section>
+  </main>
+
+  <script src="./travel_recommendation.js"></script>
+</body>
+</html>

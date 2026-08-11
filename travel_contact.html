@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Wanderly to plan your next trip.">
+  <title>Contact Us | Wanderly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body class="inner-page contact-page">
+  <nav class="navbar navbar-simple" aria-label="Main navigation">
+    <a class="brand" href="./travel_recommendation.html" aria-label="Wanderly home">
+      <span class="brand-mark">W</span>
+      <span>Wanderly</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="./travel_recommendation.html">Home</a></li>
+      <li><a href="./travel_about.html">About Us</a></li>
+      <li><a class="active" href="./travel_contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="contact-main">
+    <section class="contact-intro">
+      <p class="eyebrow">Your next story starts here</p>
+      <h1>Let's plan<br>something unforgettable.</h1>
+      <p>Tell us what you have in mind. Our travel team will help turn it into a journey.</p>
+    </section>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Where would you like to go?" required></textarea>
+      </div>
+      <button class="submit-button" type="submit">Send Message</button>
+      <p class="form-status" id="formStatus" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      formStatus.textContent = 'Thank you! We will contact you soon.';
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
